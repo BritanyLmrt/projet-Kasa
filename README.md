@@ -1,8 +1,4 @@
 
-Bien sûr ! Voici une version modifiée du README adaptée pour Yarn :
-
-Nom du Projet
-
 Ce projet a été créé avec Create React App.
 
 Scripts Disponibles
