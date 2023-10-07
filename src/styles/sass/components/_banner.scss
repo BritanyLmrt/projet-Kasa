@@ -1,29 +1,69 @@
-.banner {
-    width: 100%;
+@import '../base/typograhie';
+@import '../Utils/mixins';
+
+.banner-about {
+    width: 90%;
     height: 223px;
     display: flex;
-    align-items: center;
     justify-content: center;
-    
+    align-items: center;
+    background-image: url('/src/Assets/Image\ source\ 2.png');
+    background-size: cover;
+    background-position: center; /* Ajustez la position ici */
+    filter: brightness(50%);
+    border-radius: 20px;
+    position: relative;
+    z-index: -1;
+    margin: 0 auto; 
 
-    &-img {
+    @include mobile-version {
+        height: 111px;
         width: 90%;
-        height: 223px;
+    }
+
+}
+
+.banner {
+    width: 90%;
+    height: 223px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/src/Assets/Image source 1banner-img.png');
+    background-size: cover;
+    background-position: center; /* Ajustez la position ici */
+    filter: brightness(50%);
+    border-radius: 20px;
+    position: relative;
+    z-index: -1;
+    /* Placer en arrière-plan, derrière le texte */
+
+    @include mobile-version {
+        height: 111px;
+        width: 90%;
+    }
+
+
+    &--title {
+        width: 70%;
+        text-align: center;
         position: relative;
-        object-fit: cover;
-        filter: brightness(50%);
-        border-radius: 20px;
-        margin-top: 20px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include title-slogan;
+        bottom: 140px;
 
+        @include mobile-version {
+            font-size: 24px;
+            bottom: 80px;
+            margin-bottom: -50px;
+        }
 
+        h1 {
+            text-align: center;
+        }
     }
 
-    & p {
-        position: absolute;
-        color: white;
-        font-family: Montserrat;
-        font-size: 48px;
-        font-weight: 500;
-
-    }
 }

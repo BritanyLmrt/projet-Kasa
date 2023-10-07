@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -53,6 +54,9 @@ table {
 }
 
 body {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -67,31 +71,52 @@ body {
   font-size: 24px;
   font-weight: 500;
   text-decoration: none;
-  color: #FF6060;
-  width: 309px;
+  color: rgb(255, 96, 96);
+  font-style: normal;
+  width: 30%;
   height: 34px;
   top: 17px;
   left: 931px;
   gap: 57px;
 }
-.navbar a:hover {
-  text-decoration: dashed;
+@media only screen and (max-width: 850px) {
+  .navbar a {
+    font-size: 12px;
+    text-transform: uppercase;
+  }
 }
 .navbar ul {
   display: flex;
   flex-direction: row;
   gap: 50px;
 }
+@media only screen and (max-width: 850px) {
+  .navbar ul {
+    gap: 26px;
+  }
+}
 
 .header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 40px 80px;
+  margin: 40px 80px;
 }
-.headerlogo {
+@media only screen and (max-width: 850px) {
+  .header {
+    margin: 20px;
+  }
+}
+.header--logo {
   width: 210px;
   height: 68px;
+}
+@media only screen and (max-width: 850px) {
+  .header--logo {
+    width: 145px;
+    height: 47px;
+    margin: 0;
+  }
 }
 
 .footer {
@@ -104,36 +129,562 @@ body {
   justify-content: center;
   gap: 40px;
 }
-.footer-logo {
+.footer--logo {
   width: 122px;
   height: 40px;
 }
 .footer p {
   color: white;
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+@media only screen and (max-width: 850px) {
+  .footer p {
+    font-size: 12px;
+  }
+}
+
+.banner-about {
+  width: 90%;
+  height: 223px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/Assets/Image source 2.png");
+  background-size: cover;
+  background-position: center; /* Ajustez la position ici */
+  filter: brightness(50%);
+  border-radius: 20px;
+  position: relative;
+  z-index: -1;
+  margin: 0 auto;
+}
+@media only screen and (max-width: 850px) {
+  .banner-about {
+    height: 111px;
+    width: 90%;
+  }
 }
 
 .banner {
-  width: 100%;
-  height: 223px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.banner-img {
   width: 90%;
   height: 223px;
-  position: relative;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/Assets/Image source 1banner-img.png");
+  background-size: cover;
+  background-position: center; /* Ajustez la position ici */
   filter: brightness(50%);
   border-radius: 20px;
-  margin-top: 20px;
+  position: relative;
+  z-index: -1;
+  /* Placer en arrière-plan, derrière le texte */
 }
-.banner p {
-  position: absolute;
+@media only screen and (max-width: 850px) {
+  .banner {
+    height: 111px;
+    width: 90%;
+  }
+}
+.banner--title {
+  width: 70%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   font-family: Montserrat;
   font-size: 48px;
   font-weight: 500;
+  bottom: 140px;
+}
+@media only screen and (max-width: 850px) {
+  .banner--title {
+    font-size: 24px;
+    bottom: 80px;
+    margin-bottom: -50px;
+  }
+}
+.banner--title h1 {
+  text-align: center;
+}
+
+.cards {
+  width: 86%;
+  background-color: #f6f6f6;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  border-radius: 20;
+  padding: 40px;
+  justify-content: center;
+  border-radius: 20px;
+  line-height: 26px;
+}
+@media only screen and (max-width: 850px) {
+  .cards {
+    background-color: white;
+    padding: 10px;
+    gap: 20px;
+  }
+}
+.cards--item {
+  width: 340px;
+  height: 340px;
+  position: relative;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
+  z-index: 3;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 850px) {
+  .cards--item {
+    width: 100%;
+    height: 255px;
+  }
+}
+.cards--item-img {
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  object-fit: cover;
+  position: relative;
+  opacity: 0.7;
+}
+@media only screen and (max-width: 850px) {
+  .cards--item-img {
+    width: 100%;
+    height: 255px;
+  }
+}
+.cards--item h2 {
+  color: white;
+  font-family: Montserrat;
+  font-size: 18px;
+  position: absolute;
+  top: 268px;
+  left: 20px;
+  z-index: 2;
+  text-align: start;
+}
+@media only screen and (max-width: 850px) {
+  .cards--item h2 {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .cards--item h2 {
+    top: 200px;
+  }
+}
+
+.main-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 10px;
+}
+
+.collapse {
+  display: flex;
+  width: 100%;
+}
+
+.collapsible {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.collapsible--title {
+  height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(255, 96, 96);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  color: white;
+}
+@media only screen and (max-width: 850px) {
+  .collapsible--title {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .collapsible--title {
+    height: 30px;
+  }
+}
+.collapsible--title-icn {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.7s ease;
+}
+@media only screen and (max-width: 850px) {
+  .collapsible--title-icn {
+    width: 16px;
+    height: 16px;
+  }
+}
+.collapsible.open .collapsible--title-icn {
+  transform: rotate(-180deg);
+  transition: transform 0.7s ease;
+}
+.collapsible--text {
+  border-radius: 5px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+}
+.collapsible.open .collapsible--text {
+  max-height: 400px;
+  transition: max-height 0.7s ease;
+}
+.collapsible--text .content {
+  padding: 10px;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgb(255, 96, 96);
+  background-color: #f6f6f6;
+}
+@media only screen and (max-width: 850px) {
+  .collapsible--text .content {
+    font-size: 12px;
+  }
+}
+.collapsible--about {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+@media only screen and (max-width: 850px) {
+  .collapsible--about {
+    gap: 20px;
+    width: 90%;
+  }
+}
+.collapsible--style-cardPage {
+  display: flex;
+  gap: 30px;
+  width: 90%;
+}
+@media only screen and (max-width: 850px) {
+  .collapsible--style-cardPage {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.error--info {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+  margin: 120px;
+}
+.error--info h2 {
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  color: rgb(255, 96, 96);
+  width: 260px;
+}
+@media only screen and (max-width: 850px) {
+  .error--info h2 {
+    font-size: 18px;
+  }
+}
+.error--info img {
+  width: 284px;
+}
+@media only screen and (max-width: 850px) {
+  .error--info img {
+    width: 198px;
+  }
+}
+.error--info .homelink {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: rgb(255, 96, 96);
+}
+@media only screen and (max-width: 850px) {
+  .error--info .homelink {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+.logement {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+  gap: 10px;
+}
+.logement--pos-description {
+  width: 90%;
+  display: flex;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-weight: 500;
+  color: rgb(255, 96, 96);
+  margin-top: 10px;
+  gap: 10px;
+  flex-direction: column;
+  width: 90%;
+}
+@media only screen and (max-width: 850px) {
+  .logement--pos-description {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .logement--pos-description {
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 0;
+  }
+}
+.logement--pos-description p {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgb(255, 96, 96);
+  background-color: #f6f6f6;
+  background-color: white;
+}
+@media only screen and (max-width: 850px) {
+  .logement--pos-description p {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .logement--pos-description {
+    flex-direction: column;
+  }
+}
+.logement--pos-host-rating-tag-box {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  bottom: 100px;
+  margin-bottom: -80px;
+}
+@media only screen and (max-width: 850px) {
+  .logement--pos-host-rating-tag-box {
+    flex-direction: column-reverse;
+    bottom: 0;
+    margin-bottom: 0;
+  }
+}
+.logement .host-rating-tag-box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 850px) {
+  .logement .host-rating-tag-box {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+.slideshow {
+  width: 90%;
+  margin-top: 20px;
+  gap: 5px;
+  position: relative;
+}
+.slideshow .img {
+  width: 100%;
+  height: 415px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+@media only screen and (max-width: 850px) {
+  .slideshow .img {
+    height: 255px;
+  }
+}
+.slideshow .arrow-container {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  top: 180px;
+}
+@media only screen and (max-width: 850px) {
+  .slideshow .arrow-container {
+    top: 120px;
+  }
+}
+.slideshow .arrow-left,
+.slideshow .arrow-right {
+  width: 47px;
+  margin: 0 20px;
+}
+@media only screen and (max-width: 850px) {
+  .slideshow .arrow-left,
+  .slideshow .arrow-right {
+    width: 24px;
+    margin: 0 10px;
+  }
+}
+.slideshow .slide-number {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  bottom: 50px;
+  color: white;
+  font-family: Montserrat;
+  font-size: 18px;
+}
+@media only screen and (max-width: 850px) {
+  .slideshow .slide-number {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .slideshow .slide-number {
+    display: none;
+  }
+}
+
+.tags {
+  width: 100%;
+}
+.tags ul {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.tags ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 115px;
+  padding: 5px;
+  border-radius: 10px;
+  font-family: Montserrat;
+  font-size: 14px;
+  background-color: rgb(255, 96, 96);
+  color: white;
+  text-align: center;
+  height: 25px;
+}
+@media only screen and (max-width: 850px) {
+  .tags ul li {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .tags ul li {
+    height: 18px;
+  }
+}
+
+.host-box {
+  font-family: Montserrat;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: rgb(255, 96, 96);
+  display: flex;
+  background-color: white;
+  width: 167px;
+  align-items: center;
+  text-align: end;
+  gap: 10px;
+  margin-top: 30px;
+}
+@media only screen and (max-width: 850px) {
+  .host-box {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .host-box {
+    width: 100px;
+    height: 64px;
+    margin-top: 0;
+    gap: 5px;
+  }
+}
+.host-box img {
+  width: 64px;
+  border-radius: 50px;
+}
+@media only screen and (max-width: 850px) {
+  .host-box img {
+    width: 32px;
+  }
+}
+
+.host-rating-box {
+  width: 196px;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  align-items: flex-end;
+}
+@media only screen and (max-width: 850px) {
+  .host-rating-box {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+  }
+}
+
+.rating-box {
+  width: 196px;
+  display: flex;
+  gap: 5px;
+  justify-content: flex-end;
+}
+@media only screen and (max-width: 850px) {
+  .rating-box {
+    width: 50%;
+    justify-content: flex-start;
+  }
+}
+.rating-box img {
+  width: 36px;
+}
+@media only screen and (max-width: 850px) {
+  .rating-box img {
+    width: 14px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

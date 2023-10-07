@@ -1,0 +1,48 @@
+@import '../base/typograhie';
+@import '../Utils/mixins';
+
+.host-box {
+    @include paragraph;
+    display: flex;
+    background-color: white;
+    width: 167px;
+    align-items: center;
+    text-align: end;
+    gap: 10px;
+    margin-top: 30px;
+
+    @include mobile-version {
+        width: 100px;
+        height: 64px;
+        margin-top: 0;
+        gap: 5px;
+    }
+
+    img {
+        width: 64px;
+        border-radius: 50px;
+
+        @include mobile-version {
+            width: 32px;
+        }
+
+    }
+}
+
+.host-rating-box {
+    width: 196px;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: flex-end;
+     
+
+    @include mobile-version {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+    }
+
+}

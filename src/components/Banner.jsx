@@ -1,11 +1,13 @@
-import bannerImg from '../Assets/Image source 1banner-img.png';
-
-function Banner(){
+function Banner(props) {
     return (
-       <div className="banner">
-        <img src={bannerImg} alt='Falaise en bord de mer' className='banner-img' />
-        <p>Chez vous, partout et ailleurs</p>
-       </div>
-    )
+        <>
+            <div className={props.className}>
+            </div>
+            <div className={props.title}>
+                <h1>{props.text}</h1>
+            </div>
+        </>
+    );
 }
+
 export default Banner;

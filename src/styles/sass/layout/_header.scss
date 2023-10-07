@@ -1,11 +1,24 @@
+@import '../Utils/mixins';
+
 .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding : 40px 80px;
+    margin: 40px 80px;
 
-    &logo {
+    @include mobile-version {
+        margin: 20px;
+    }
+
+    &--logo {
         width: 210px;
         height: 68px;
+        
+        @include mobile-version {
+            width: 145px;
+            height: 47px;
+            margin :0;
+        }
+
     }
 }

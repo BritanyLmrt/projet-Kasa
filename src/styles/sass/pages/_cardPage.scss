@@ -1,0 +1,68 @@
+@import '../base/typograhie';
+@import '../Utils/mixins';
+
+.logement {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    gap: 10px;
+
+
+    &--pos-description {
+        width: 90%;
+        display: flex;
+        @include text-medium;
+        margin-top: 10px;
+        gap: 10px;
+        flex-direction: column;
+        width: 90%;
+
+        @include mobile-version {
+            flex-direction: column;
+            margin-top: 5px;
+            gap: 0;
+        }
+
+        p {
+            @include text-red;
+            background-color: white;
+        }
+
+        @include mobile-version {
+            flex-direction: column;
+        }
+    }
+
+    &--pos-host-rating-tag-box {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        position: relative;
+        bottom: 100px;
+        margin-bottom: -80px;
+
+        @include mobile-version {
+            flex-direction: column-reverse;
+            bottom:0;
+            margin-bottom: 0;
+        }
+
+    }
+
+    .host-rating-tag-box {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        @include mobile-version {
+
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}

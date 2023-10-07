@@ -1,0 +1,26 @@
+@import '../base/typograhie';
+
+.tags {
+    width: 100%;
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap : 20px;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 115px;
+            padding: 5px;
+            border-radius: 10px;
+            @include tag-text;
+            height: 25px;
+
+            @include mobile-version {
+                height : 18px;
+            }
+
+        }
+    }
+}

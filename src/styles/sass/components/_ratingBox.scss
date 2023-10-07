@@ -1,0 +1,20 @@
+@import '../Utils/mixins';
+
+.rating-box {
+    width: 196px;
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+        @include mobile-version{
+            width: 50%;
+            justify-content: flex-start;
+        }
+
+    img {
+        width: 36px;
+
+        @include mobile-version {
+            width: 14px;
+        }
+    }
+}
