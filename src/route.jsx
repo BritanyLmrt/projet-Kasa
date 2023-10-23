@@ -10,7 +10,7 @@ import CardPage from './pages/CardPage';
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home />}  />
       <Route path="/about" element={<About />} />
       <Route path="/card/:id" element={<CardPage />} />
       <Route path="*" element={<Error404 />} />

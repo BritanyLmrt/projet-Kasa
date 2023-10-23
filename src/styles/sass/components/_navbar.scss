@@ -16,10 +16,16 @@
         left: 931px;
         gap: 57px;
 
+
+      
+
         @include mobile-version {
             font-size: 12px;
             text-transform: uppercase;
         }
+    }
+    .selected  {
+        text-decoration: underline;
     }
 
 
@@ -29,9 +35,9 @@
         gap: 50px;
 
 
-    @include mobile-version {
-        gap: 26px
-    }
+        @include mobile-version {
+            gap: 26px
+        }
 
     }
 }

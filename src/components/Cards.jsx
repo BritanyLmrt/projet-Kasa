@@ -6,8 +6,6 @@ function Card() {
 
   const itemsArray = data;
 
-
- 
   const cards = itemsArray.map(item => (
 
       <Link to={`/card/${item.id}`} key={item.id} className='cards--item'>

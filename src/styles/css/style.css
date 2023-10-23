@@ -85,6 +85,9 @@ body {
     text-transform: uppercase;
   }
 }
+.navbar .selected {
+  text-decoration: underline;
+}
 .navbar ul {
   display: flex;
   flex-direction: row;
