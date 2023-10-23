@@ -3,18 +3,9 @@ import { Link } from 'react-router-dom';
 
 
 function Card() {
-<<<<<<< HEAD
-=======
-
-  const itemsArray = data;
->>>>>>> dded21bf1dff9bdc7fb7cec2516dc2d7fb3a5c67
 
   const itemsArray = data;
 
-<<<<<<< HEAD
-=======
- 
->>>>>>> dded21bf1dff9bdc7fb7cec2516dc2d7fb3a5c67
   const cards = itemsArray.map(item => (
 
       <Link to={`/card/${item.id}`} key={item.id} className='cards--item'>
